@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rardelean\\AdventOfCode2024\\Day1\\Day1.csproj",
-      "projectName": "Day1",
-      "projectPath": "C:\\Users\\rardelean\\AdventOfCode2024\\Day1\\Day1.csproj",
+      "projectUniqueName": "C:\\Users\\rardelean\\AdventOfCode2024\\Day2\\Day2.csproj",
+      "projectName": "Day2",
+      "projectPath": "C:\\Users\\rardelean\\AdventOfCode2024\\Day2\\Day2.csproj",
       "packagesPath": "C:\\Users\\rardelean\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rardelean\\AdventOfCode2024\\Day1\\obj\\",
+      "outputPath": "C:\\Users\\rardelean\\AdventOfCode2024\\Day2\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
