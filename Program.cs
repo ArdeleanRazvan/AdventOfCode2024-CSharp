@@ -1,6 +1,6 @@
 ﻿using AdventOfCode_2024;
 
-Action[] problemSolutions = [Day01.Run, Day02.Run, Day03.Run, Day04.Run, Day05.Run, Day06.Run, Day07.Run];
+Action[] problemSolutions = [Day01.Run, Day02.Run, Day03.Run, Day04.Run, Day05.Run, Day06.Run, Day07.Run, Day08.Run];
 
 foreach (var index in ProblemIndices()) problemSolutions[index]();
 

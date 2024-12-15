@@ -14,9 +14,7 @@ public static class Day07
             .Sum(equation => equation.testValue);
         Console.WriteLine($"Calibration result for *: {calibrationResult}");
 
-        Operators = Operators
-            .Concat(['|'])
-            .ToList();
+        Operators = Operators.Concat(['|']).ToList();
         calibrationResult = equations
             .Where(IsValidEquation)
             .ToList()
