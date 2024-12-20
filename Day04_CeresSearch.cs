@@ -1,7 +1,9 @@
 ﻿namespace AdventOfCode_2024;
 
-public static class Day04
+public static class Day04_CeresSearch
 {
+    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day04_input.txt";
+
     public static void Run()
     {
         var grid = LoadGrid();
@@ -82,8 +84,6 @@ public static class Day04
 
         #endregion*/
     }
-
-    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day04_input.txt";
 
     private static char[,] LoadGrid() => File
         .ReadAllLines(InputFilePath)

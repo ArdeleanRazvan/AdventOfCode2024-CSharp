@@ -1,7 +1,10 @@
 ﻿namespace AdventOfCode_2024;
 
-public static class Day06
+public static class Day06_GuardGallivant
 {
+    private static readonly string Orientations = "^>v<";
+    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day06_input.txt";
+
     public static void Run()
     {
         var map = LoadMap();
@@ -83,9 +86,6 @@ public static class Day06
         .SelectMany((row, rowIndex) =>
             row.Select((cell, colIndex) => (rowIndex, colIndex, cell)))
         .First(tuple => Orientations.Contains(tuple.cell));
-
-    private static string Orientations = "^>v<";
-    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day06_input.txt";
 
     private static char[][] LoadMap() => File
         .ReadAllLines(InputFilePath)

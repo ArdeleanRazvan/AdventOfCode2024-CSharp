@@ -2,8 +2,12 @@
 
 namespace AdventOfCode_2024;
 
-public static class Day07
+public static class Day07_BridgeRepair
 {
+    private static List<char> Operators = ['+', '*'];
+
+    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day07_input.txt";
+
     public static void Run()
     {
         var equations = LoadEquations();
@@ -14,15 +18,15 @@ public static class Day07
             .Sum(equation => equation.testValue);
         Console.WriteLine($"Calibration result for *: {calibrationResult}");
 
-        Operators = Operators.Concat(['|']).ToList();
+        Operators = Operators
+            .Concat(['|'])
+            .ToList();
         calibrationResult = equations
             .Where(IsValidEquation)
             .ToList()
             .Sum(equation => equation.testValue);
         Console.WriteLine($"Calibration result for **: {calibrationResult}");
     }
-
-    private static List<char> Operators = ['+', '*'];
 
     private static bool IsValidEquation(this (long testValue, int[] numbers) equation)
     {
@@ -41,7 +45,7 @@ public static class Day07
                     var result = combo
                         .Select((op, i) => op switch
                         {
-                            '+' => (Func<long, long>)(x => x + equation.numbers[i + 1]),
+                            '+' => x => x + equation.numbers[i + 1],
                             '*' => x => x * equation.numbers[i + 1],
                             '|' => (Func<long, long>)(x => long.Parse($"{x}{equation.numbers[i + 1]}"))
                         })
@@ -49,8 +53,6 @@ public static class Day07
                     return result == equation.testValue;
                 });
     }
-
-    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day07_input.txt";
 
     private static List<(long testValue, int[] numbers)> LoadEquations() => Regex
         .Matches(File.ReadAllText(InputFilePath), @"(?<testValue>\d+)\:\s(?<numbers>.+)")

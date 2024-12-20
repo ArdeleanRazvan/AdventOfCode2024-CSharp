@@ -1,7 +1,9 @@
 ﻿namespace AdventOfCode_2024;
 
-public static class Day05
+public static class Day05_PrintQueue
 {
+    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day05_input.txt";
+
     public static void Run()
     {
         var pageRules = LoadPageRules();
@@ -51,9 +53,6 @@ public static class Day05
                        pages.IndexOf(rule.before) != -1 &&
                        pages.IndexOf(rule.after) != -1)
         .All(rule => pages.IndexOf(rule.before) < pages.IndexOf(rule.after));
-
-
-    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day05_input.txt";
 
     private static (int before, int after) ToTuple(this string line)
     {

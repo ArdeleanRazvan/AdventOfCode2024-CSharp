@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode_2024;
 
-public static class Day02
+public static class Day02_RedNosedReports
 {
     private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day02_input.txt";
 

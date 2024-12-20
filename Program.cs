@@ -1,6 +1,17 @@
 ﻿using AdventOfCode_2024;
 
-Action[] problemSolutions = [Day01.Run, Day02.Run, Day03.Run, Day04.Run, Day05.Run, Day06.Run, Day07.Run, Day08.Run];
+Action[] problemSolutions =
+[
+    Day01_HistorianHysteria.Run,
+    Day02_RedNosedReports.Run,
+    Day03_MullItOver.Run,
+    Day04_CeresSearch.Run,
+    Day05_PrintQueue.Run,
+    Day06_GuardGallivant.Run,
+    Day07_BridgeRepair.Run,
+    Day08_ResonantCollinearity.Run,
+    Day09_DiskFragmenter.Run
+];
 
 foreach (var index in ProblemIndices()) problemSolutions[index]();
 

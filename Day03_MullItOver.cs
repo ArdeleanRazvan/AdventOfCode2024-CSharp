@@ -2,7 +2,7 @@
 
 namespace AdventOfCode_2024;
 
-public static class Day03
+public static class Day03_MullItOver
 {
     private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day03_input.txt";
 

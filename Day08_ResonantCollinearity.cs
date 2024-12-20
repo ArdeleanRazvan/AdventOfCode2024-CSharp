@@ -5,7 +5,7 @@
    antinode1[row2 + (row2 - row1)][col2 + (col2 - col1)]
    antinode2[row1 - (row2 - row1)][col1 - (col2 - col1)]
 */
-public static class Day08
+public static class Day08_ResonantCollinearity
 {
     private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day08_input.txt";
 

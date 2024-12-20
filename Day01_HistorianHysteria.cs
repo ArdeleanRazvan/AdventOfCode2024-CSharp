@@ -1,9 +1,9 @@
-﻿using System.Text.RegularExpressions;
+﻿namespace AdventOfCode_2024;
 
-namespace AdventOfCode_2024;
-
-public static class Day01
+public static class Day01_HistorianHysteria
 {
+    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day01_input.txt";
+
     public static void Run()
     {
         var (left, right) = LoadLists();
@@ -22,8 +22,6 @@ public static class Day01
         Console.WriteLine($"Distance: {dist}");
         Console.WriteLine($"Similarity: {similarity}");
     }
-
-    private static readonly string InputFilePath = $"{Directory.GetCurrentDirectory()}\\inputs\\day01_input.txt";
 
     private static (List<int> left, List<int> right) LoadLists()
     {
