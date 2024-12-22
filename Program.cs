@@ -10,7 +10,8 @@ Action[] problemSolutions =
     Day06_GuardGallivant.Run,
     Day07_BridgeRepair.Run,
     Day08_ResonantCollinearity.Run,
-    Day09_DiskFragmenter.Run
+    Day09_DiskFragmenter.Run,
+    Day10_HoofIt.Run
 ];
 
 foreach (var index in ProblemIndices()) problemSolutions[index]();
