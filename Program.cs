@@ -13,7 +13,8 @@ Action[] problemSolutions =
     Day09_DiskFragmenter.Run,
     Day10_HoofIt.Run,
     Day11_PlutonianPebbles.Run,
-    Day12_GardenGroups.Run
+    Day12_GardenGroups.Run,
+    Day13_ClawContraption.Run
 ];
 
 foreach (var index in ProblemIndices()) problemSolutions[index]();
