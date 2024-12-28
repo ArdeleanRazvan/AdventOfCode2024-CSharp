@@ -41,6 +41,11 @@ internal static class Common
         .Select(match => int.Parse(match.Value))
         .ToList();
 
+    public static List<int> ParseInt(this string line) => Regex
+        .Matches(line, @"(\d+|-\d+)")
+        .Select(match => int.Parse(match.Value))
+        .ToList();
+
     public static List<long> ParseLongNoSign(this string line) => Regex
         .Matches(line, @"\d+")
         .Select(match => long.Parse(match.Value))

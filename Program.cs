@@ -14,7 +14,8 @@ Action[] problemSolutions =
     Day10_HoofIt.Run,
     Day11_PlutonianPebbles.Run,
     Day12_GardenGroups.Run,
-    Day13_ClawContraption.Run
+    Day13_ClawContraption.Run,
+    Day14_RestroomRedoubt.Run
 ];
 
 foreach (var index in ProblemIndices()) problemSolutions[index]();
